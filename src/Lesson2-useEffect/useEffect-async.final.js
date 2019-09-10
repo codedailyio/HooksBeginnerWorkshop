@@ -6,9 +6,10 @@ const Lesson2 = () => {
   const [value, setValue] = useState("");
 
   useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+
     const loadData = async () => {
-      var controller = new AbortController();
-      var signal = controller.signal;
       try {
         const response = await fetch(
           `https://api.github.com/users/${searchUser}`,
