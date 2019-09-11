@@ -33,6 +33,7 @@ const Lesson2 = () => {
       controller && controller.abort();
     };
   }, [searchUser]);
+
   return (
     <div>
       <input
